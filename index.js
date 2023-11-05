@@ -206,8 +206,6 @@ function clearPost() {
   textPostNode.value = null;
   labelTitleNode.innerText = `0 / 50`;
   labelTextNode.innerText = `0 / 200`;
-  labelTitleErrorNode.innerText = null;
-  labelTextErrorNode.innerText = null;
   disabledSubmitButton();
 }
 
