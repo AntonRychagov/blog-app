@@ -173,12 +173,16 @@ function validation() {
     return;
   }
 
+  labelTitleErrorNode.innerText = null;
+
   // вывод предупреждения , если текст поста пустой
   if (textLength === 0) {
     labelTextErrorNode.innerText = TEXT_ERROR;
     disabledSubmitButton();
     return;
   }
+
+  labelTextErrorNode.innerText = null;
 
   // если условия соблюдены выполняем данный код
   unDisabledSubmitButton(); // включаем кнопку опубликовать , если услровия выполнены
