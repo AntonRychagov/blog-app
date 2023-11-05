@@ -327,8 +327,10 @@ h1 {
 
 @media (max-width: 940px) {
   .row {
-    max-width: 339px;
+    max-width: 350px;
     flex-direction: column;
     gap: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
