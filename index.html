@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@400;700&family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Blog app</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>BLOG</h1>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col new__post">
+          <h2 class="title">Новый пост</h2>
+          <input
+            id="inputTitle"
+            class="js-post-title-input input"
+            type="text"
+            placeholder="Напиши заголовок"
+          />
+          <div class="input__label">
+            <label
+              id="labelErrorTitle"
+              class="label__text"
+              for="inputTitle"
+            ></label>
+            <label id="labelTitle" class="label__text" for="inputTitle"
+              >0 / 50
+            </label>
+          </div>
+          <textarea
+            id="textareaText"
+            class="js-post-text-textarea textarea"
+            placeholder="Напиши пост"
+          ></textarea>
+          <div class="text__label">
+            <label
+              id="labelErrorText"
+              class="label__text"
+              for="textareaText"
+            ></label>
+            <label id="labelText" class="label__text" for="textareaText"
+              >0 / 200
+            </label>
+          </div>
+          <div id="validationMessage" class="error"></div>
+          <div class="posts__button">
+            <button id="button__publish" class="js-btn-publish btn">
+              Опубликовать
+            </button>
+            <button class="js-btn-clear btn btn__red">Очистить</button>
+          </div>
+        </div>
+        <div class="col feedback__post">
+          <div class="feedback">
+            <div class="posts__feedback">
+              <h2 class="title feedback__title">Лента</h2>
+              <div class="js-post post__feedback-inner">
+                <p class="post__feedback-text">Лента пока пуста</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <footer>
+      <p class="footer__name">By.Rychagov</p>
+      <p class="footer__info">SD.CODE 2023</p>
+    </footer> -->
+    <script src="index.js"></script>
+  </body>
+</html>
