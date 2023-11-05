@@ -209,6 +209,10 @@ h1 {
   font-size: 12px;
 }
 
+.error__text {
+  color: red;
+}
+
 .error {
   font-size: 12px;
   color: red;
