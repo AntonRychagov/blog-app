@@ -347,7 +347,7 @@ h1 {
 
 @media (max-width: 430px) {
   .row {
-    max-width: 296px;
+    max-width: 330px;
   }
 
   .btn {
