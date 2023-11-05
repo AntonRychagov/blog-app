@@ -349,4 +349,8 @@ h1 {
   .row {
     max-width: 296px;
   }
+
+  .btn {
+    width: 120px;
+  }
 }
