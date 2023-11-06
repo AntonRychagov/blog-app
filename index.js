@@ -134,14 +134,25 @@ function textCount() {
 checkLength(); // проверка полей ввода
 
 function checkLength() {
-  const titleLength = titlePostNode.value.length;
-  const textLength = textPostNode.value.length;
+  const titleLength = titlePostNode.value.trim().length;
+  const textLength = textPostNode.value.trim().length;
 
+  //проверяем на пробелы
   if (titleLength === 0 || textLength === 0) {
     disabledSubmitButton();
     titlePostNode.focus(); //фокус на поле заголовка
     return;
   }
+
+  // проверка двух условий на колличество символов
+  if (
+    titleLength > TITLE_VALIDATION_LIMIT ||
+    textLength > TEXT_VALIDATION_LIMIT
+  ) {
+    disabledSubmitButton();
+    return;
+  }
+
   unDisabledSubmitButton();
 }
 
@@ -184,8 +195,13 @@ function validation() {
 
   labelTextErrorNode.innerText = null;
 
+  if (titleLength === "" || textLength === "") {
+    disabledSubmitButton();
+    return;
+  }
+
   // если условия соблюдены выполняем данный код
-  unDisabledSubmitButton(); // включаем кнопку опубликовать , если услровия выполнены
+  // unDisabledSubmitButton(); // включаем кнопку опубликовать , если услровия выполнены
 }
 
 // функция блокирует кнопку (ОПУБЛИКОВАТЬ)
