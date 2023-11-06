@@ -177,6 +177,15 @@ function validation() {
 
   validationMessage.innerText = null;
 
+  emptyLineWarning();
+
+}
+
+
+function emptyLineWarning() {
+  const titleLength = titlePostNode.value.length;
+  const textLength = textPostNode.value.length;
+
   // вывод предупреждения , если заголовок пустой
   if (titleLength === 0) {
     labelTitleErrorNode.innerText = TITLE_ERROR;
@@ -195,14 +204,8 @@ function validation() {
 
   labelTextErrorNode.innerText = null;
 
-  if (titleLength === "" || textLength === "") {
-    disabledSubmitButton();
-    return;
-  }
-
-  // если условия соблюдены выполняем данный код
-  // unDisabledSubmitButton(); // включаем кнопку опубликовать , если услровия выполнены
-}
+  unDisabledSubmitButton()
+};
 
 // функция блокирует кнопку (ОПУБЛИКОВАТЬ)
 function disabledSubmitButton() {
@@ -237,3 +240,6 @@ titlePostNode.addEventListener("keydown", (event) => {
     }
   }
 });
+
+
+
