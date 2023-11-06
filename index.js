@@ -140,7 +140,6 @@ function checkLength() {
   //проверяем на пробелы
   if (titleLength === 0 || textLength === 0) {
     disabledSubmitButton();
-    titlePostNode.focus(); //фокус на поле заголовка
     return;
   }
 
